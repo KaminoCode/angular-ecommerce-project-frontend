@@ -369,6 +369,7 @@ input.au-input.au-input-xl {
   height: -webkit-calc(100vh - 75px);
   height: -moz-calc(100vh - 75px);
   height: calc(100vh - 75px);
+  text-decoration: none;
 }
 
 .navbar-sidebar {
@@ -381,6 +382,7 @@ input.au-input.au-input-xl {
   color: #555;
   font-size: 16px;
   padding: 5px 0;
+  text-decoration: none;
 }
 
 .navbar-sidebar .navbar-list li a i {
@@ -388,7 +390,7 @@ input.au-input.au-input-xl {
 }
 
 .navbar-sidebar .navbar-list li a:hover {
-  color: #0da8e4;
+  color: #bddf3c;
 }
 
 /* 
@@ -771,6 +773,7 @@ a.primary-btn:hover {
 
 .active-link {
   font-weight: bold;
+  text-decoration: none;
 }
 
 /* 
