@@ -32,8 +32,6 @@ export class ProductListComponent implements OnInit {
     } else {
       this.handleListProducts();
     }
-
-    this.handleListProducts();
   }
 
   handleSearchProducts() {
