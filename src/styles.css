@@ -92,11 +92,13 @@ h6 {
 
 a {
   display: inline-block;
+  text-decoration: none;
 }
 
 a:active,
 a:focus,
-a:hover {
+a:hover,
+a:link {
   text-decoration: none;
   outline: 0;
 }
@@ -107,6 +109,7 @@ a:hover {
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 /*Layout Css*/
