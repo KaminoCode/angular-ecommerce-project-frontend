@@ -55,7 +55,7 @@ export class ProductService {
   ): Observable<GetResponseProducts> {
     // need to build URL based on keyword, page and size
     const searchUrl =
-      `${this.baseUrl}/search/findByNameContaining?id=${theKeyword}` +
+      `${this.baseUrl}/search/findByNameContaining?name=${theKeyword}` +
       `&page=${thePage}&size=${thePageSize}`;
 
     return this.httpClient.get<GetResponseProducts>(searchUrl);
