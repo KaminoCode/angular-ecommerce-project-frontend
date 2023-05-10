@@ -1,1 +1,4 @@
-export class State {}
+export class State {
+  id: number;
+  name: string;
+}
