@@ -1,2 +1,1 @@
-export class State {
-}
+export class State {}
