@@ -13,6 +13,24 @@
             <div class="col-md-9">
               <div class="input-space">
                 <input formControlName="firstName" type="text">
+
+                <!-- check to make sure firstName is valie -->
+
+                <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+                  class="alert alert-danger mt-1">
+
+                  <!-- display error messages if firstName is not valid-->
+
+                  <div *ngIf="firstName.errors.required">
+                    First name is required
+                  </div>
+
+                  <div *ngIf="firstName.errors.minlength">
+                    First Name must be at least 2 characters long
+                  </div>
+
+                </div>
+
               </div>
             </div>
           </div>
