@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Country } from 'src/app/common/country';
 import { KaminoCodeFormService } from 'src/app/services/kamino-code-form.service';
 
 @Component({
@@ -15,6 +16,8 @@ export class CheckoutComponent implements OnInit {
 
   creditCardYears: number[] = [];
   creditCardMonths: number[] = [];
+
+  countries: Country[] = [];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -67,6 +70,12 @@ export class CheckoutComponent implements OnInit {
     this.kaminoCodeFormService.getCreditCardYears().subscribe((data) => {
       console.log('Retrieved credit card years: ' + JSON.stringify(data));
       this.creditCardYears = data;
+    });
+
+    // populate countries
+    this.kaminoCodeFormService.getCountries().subscribe((data) => {
+      console.log('Retrieved countries: ' + JSON.stringify(data));
+      this.countries = data;
     });
   }
 
