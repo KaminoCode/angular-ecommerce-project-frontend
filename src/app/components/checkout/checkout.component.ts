@@ -45,6 +45,7 @@ export class CheckoutComponent implements OnInit {
         lastName: new FormControl('', [
           Validators.required,
           Validators.minLength(2),
+          KaminoCodeValidators.notOnlyWhitespace,
         ]),
         email: new FormControl('', [
           Validators.required,

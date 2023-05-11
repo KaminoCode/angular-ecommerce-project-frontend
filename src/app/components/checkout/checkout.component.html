@@ -21,7 +21,7 @@
 
                   <!-- display error messages if firstName is not valid-->
 
-                  <div *ngIf="firstName.errors.required">
+                  <div *ngIf="firstName.errors.required || firstName.errors.notOnlyWhitespace">
                     First name is required
                   </div>
 
@@ -47,7 +47,7 @@
 
                   <!-- display error messages if firstName is not valid-->
 
-                  <div *ngIf="lastName.errors.required">
+                  <div *ngIf="lastName.errors.required || lastName.errors.notOnlyWhitespace">
                     Last name is required
                   </div>
 
