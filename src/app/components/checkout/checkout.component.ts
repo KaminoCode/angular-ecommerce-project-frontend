@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { Country } from 'src/app/common/country';
 import { State } from 'src/app/common/state';
+import { CartService } from 'src/app/services/cart.service';
 import { KaminoCodeFormService } from 'src/app/services/kamino-code-form.service';
 import { KaminoCodeValidators } from 'src/app/validators/kamino-code-validators';
 
@@ -31,7 +32,8 @@ export class CheckoutComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private kaminoCodeFormService: KaminoCodeFormService
+    private kaminoCodeFormService: KaminoCodeFormService,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
