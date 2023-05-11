@@ -68,7 +68,7 @@
               <div class="input-space">
                 <input formControlName="email" type="text">
 
-                <!-- check to make sure firstName is valie -->
+                <!-- check to make sure firstName is valid -->
 
                 <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger mt-1">
 
@@ -104,6 +104,20 @@
                     {{ country.name }}
                   </option>
                 </select>
+
+                <!-- check to make sure shippingAddressCountry is valid -->
+
+                <div
+                  *ngIf="shippingAddressCountry.invalid && (shippingAddressCountry.dirty || shippingAddressCountry.touched)"
+                  class="alert alert-danger mt-1">
+
+                  <!-- display error messages if shippingAddressCountry is not valid-->
+
+                  <div *ngIf="shippingAddressCountry.errors.required">
+                    Country is required
+                  </div>
+
+                </div>
               </div>
             </div>
           </div>
