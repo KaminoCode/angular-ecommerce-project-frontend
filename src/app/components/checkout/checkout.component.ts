@@ -136,8 +136,8 @@ export class CheckoutComponent implements OnInit {
     return this.checkoutFormGroup.get('shippingAddress.state');
   }
 
-  get shippingAddressZipcode() {
-    return this.checkoutFormGroup.get('shippingAddress.zipCode');
+  get shippingAddressZipCode() {
+    return this.checkoutFormGroup.get('shippingAddress.zipcode');
   }
 
   get shippingAddressCountry() {
