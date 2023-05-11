@@ -8,6 +8,7 @@ import {
 import { Country } from 'src/app/common/country';
 import { State } from 'src/app/common/state';
 import { KaminoCodeFormService } from 'src/app/services/kamino-code-form.service';
+import { KaminoCodeValidators } from 'src/app/validators/kamino-code-validators';
 
 @Component({
   selector: 'app-checkout',
@@ -39,6 +40,7 @@ export class CheckoutComponent implements OnInit {
         firstName: new FormControl('', [
           Validators.required,
           Validators.minLength(2),
+          KaminoCodeValidators.notOnlyWhitespace,
         ]),
         lastName: new FormControl('', [
           Validators.required,
