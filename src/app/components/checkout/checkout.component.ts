@@ -37,6 +37,8 @@ export class CheckoutComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.reviewCartDetails();
+
     this.checkoutFormGroup = this.formBuilder.group({
       customer: this.formBuilder.group({
         firstName: new FormControl('', [
@@ -134,6 +136,16 @@ export class CheckoutComponent implements OnInit {
       console.log('Retrieved countries: ' + JSON.stringify(data));
       this.countries = data;
     });
+  }
+  reviewCartDetails() {
+    // subscribe to the cartService.totalQuantity
+    this.cartService.totalQuantity.subscribe(
+      (totalQuantity) => (this.totalQuantity = totalQuantity)
+    );
+    // subscribe to the cartService.totalPrice
+    this.cartService.totalPrice.subscribe(
+      (totalPrice) => (this.totalPrice = totalPrice)
+    );
   }
 
   get firstName() {
